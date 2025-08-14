@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bengali, Hindi & English Translator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url('baground.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+        color: #000;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    header img {
+        height: 80px;
+        width: 80px;
+        border-radius: 12px;
+    }
+    header h1 {
+        color: #000;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    textarea, select, button {
+        margin: 12px 0;
+        padding: 15px;
+        font-size: 18px;
+        width: 400px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        background-color: rgba(255,255,255,0.9);
+        color: #000;
+    }
+    select {
+        background-color: rgba(255,255,255,0.95);
+    }
+    button {
+        background-color: #f4a261;
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 15px;
+    }
+    button:hover {
+        background-color: #e76f51;
+    }
+    #output {
+        margin-top: 25px;
+        padding: 20px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        min-height: 60px;
+        width: 400px;
+        font-size: 20px;
+        color: #000;
+    }
+    footer {
+        margin-top: 40px;
+        padding: 20px;
+        background: rgba(255,255,255,0.8);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+        max-width: 600px;
+    }
+    footer h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Translator Logo">
+    <h1>Translator</h1>
+</header>
+
+<textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+<select id="fromLang">
+    <option value="en">English</option>
+    <option value="hi">Hindi</option>
+    <option value="bn">Bengali</option>
+</select>
+
+<select id="toLang">
+    <option value="hi">Hindi</option>
+    <option value="bn">Bengali</option>
+    <option value="en">English</option>
+</select>
+
+<button onclick="translateText()">Translate</button>
+
+<div id="output">Translation will appear here...</div>
+
+<footer>
+    <h2>About</h2>
+    <p>Created by <strong>Soumajit Chakraborty</strong></p>
+    <p>Email: <a href="mailto:soumajitchakraborty07@gmail.com">soumajitchakraborty07@gmail.com</a></p>
+</footer>
+
+<script>
+function translateText() {
+    let text = document.getElementById("inputText").value;
+    let fromLang = document.getElementById("fromLang").value;
+    let toLang = document.getElementById("toLang").value;
+
+    if (!text) {
+        alert("Please enter some text to translate!");
+        return;
+    }
+
+    let url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${fromLang}|${toLang}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("output").innerText = data.responseData.translatedText;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("output").innerText = "Translation failed. Please try again.";
+        });
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
