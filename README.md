@@ -27,7 +27,6 @@ This project is designed to help users easily translate text between different l
 - **JavaScript** – Logic and API handling  
 - **Translation API** – Language conversion  
 
----
 
 ## 📂 Project Structure
 
