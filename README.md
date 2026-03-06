@@ -8,7 +8,6 @@ Overview
 
 This project is designed to help users easily translate text between different languages in real time. It provides a clean UI, smooth user experience, and accurate translations using a translation API.
 
----
 
 ## 🚀 Features
 
