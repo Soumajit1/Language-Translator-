@@ -18,7 +18,7 @@ This project is designed to help users easily translate text between different l
 - 🔄 Easy language switching  
 - 📱 Responsive design (Desktop & Mobile)
 
----
+
 
 ## 🛠️ Technologies Used
 
