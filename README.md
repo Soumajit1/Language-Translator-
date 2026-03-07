@@ -19,7 +19,7 @@ Features
 
 
 
-## 🛠️ Technologies Used
+ Technologies Used
 
 - **HTML** – Structure of the application  
 - **CSS** – Styling and responsiveness  
