@@ -27,6 +27,6 @@ Features
 - **Translation API** – Language conversion  
 
 
-## 📂 Project Structure
+ Project Structure
 
 BY,SOUMAJIT CHAKRABORTY
