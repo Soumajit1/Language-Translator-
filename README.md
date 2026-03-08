@@ -14,7 +14,7 @@ Features
 - ⚡ Real-time text translation  
 - 🖥️ Simple and intuitive interface  
 - 🔄 Easy language switching  
-- 📱 Responsive design (Desktop & Mobile)
+-  Responsive design (Desktop & Mobile)
 
 
 
