@@ -2,7 +2,6 @@
 
 A simple, fast, and user-friendly **Language Translator** that allows users to translate text from one language to another using modern web technologies.
 
----
 
 Overview
 
