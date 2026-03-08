@@ -12,7 +12,7 @@ Features
 
 - 🌍 Supports multiple languages  
 - ⚡ Real-time text translation  
-- 🖥️ Simple and intuitive interface  
+-  Simple and intuitive interface  
 -  Easy language switching  
 -  Responsive design (Desktop & Mobile)
 
