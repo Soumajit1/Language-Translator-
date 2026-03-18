@@ -10,6 +10,7 @@ This project is designed to help users easily translate text between different l
 
 Features
 1st
+2nd
 
 - 🌍 Supports multiple languages  
 - ⚡ Real-time text translation  
